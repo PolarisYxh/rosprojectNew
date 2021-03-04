@@ -1,0 +1,8 @@
+prefix=/home/yxh/Documents/mars/install
+
+Name: a502_teleop
+Description: Description of a502_teleop
+Version: 1.2.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp geometry_msgs joy rospy

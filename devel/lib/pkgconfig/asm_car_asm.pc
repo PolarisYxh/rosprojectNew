@@ -1,0 +1,8 @@
+prefix=/home/yxh/Documents/mars/devel
+
+Name: asm_car_asm
+Description: Description of asm_car_asm
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

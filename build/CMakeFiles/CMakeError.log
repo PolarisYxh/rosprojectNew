@@ -1,0 +1,107 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_993bf/fast && /usr/bin/make  -f CMakeFiles/cmTC_993bf.dir/build.make CMakeFiles/cmTC_993bf.dir/build
+make[1]: Entering directory '/home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_993bf.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_993bf.dir/src.c.o   -c /home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_993bf
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_993bf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_993bf.dir/src.c.o  -o cmTC_993bf 
+CMakeFiles/cmTC_993bf.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_993bf.dir/build.make:106: recipe for target 'cmTC_993bf' failed
+make[1]: *** [cmTC_993bf] Error 1
+make[1]: Leaving directory '/home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_993bf/fast' failed
+make: *** [cmTC_993bf/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_149a4/fast && /usr/bin/make  -f CMakeFiles/cmTC_149a4.dir/build.make CMakeFiles/cmTC_149a4.dir/build
+make[1]: Entering directory '/home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_149a4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_149a4.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_149a4
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_149a4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_149a4.dir/CheckFunctionExists.c.o  -o cmTC_149a4  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_149a4.dir/build.make:106: recipe for target 'cmTC_149a4' failed
+make[1]: *** [cmTC_149a4] Error 1
+make[1]: Leaving directory '/home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_149a4/fast' failed
+make: *** [cmTC_149a4/fast] Error 2
+
+
+
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_74f76/fast && /usr/bin/make  -f CMakeFiles/cmTC_74f76.dir/build.make CMakeFiles/cmTC_74f76.dir/build
+make[1]: Entering directory '/home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_74f76.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_74f76.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_74f76
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74f76.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    -rdynamic CMakeFiles/cmTC_74f76.dir/CheckFunctionExists.c.o  -o cmTC_74f76 
+CMakeFiles/cmTC_74f76.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_74f76.dir/build.make:106: recipe for target 'cmTC_74f76' failed
+make[1]: *** [cmTC_74f76] Error 1
+make[1]: Leaving directory '/home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_74f76/fast' failed
+make: *** [cmTC_74f76/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3754b/fast && /usr/bin/make  -f CMakeFiles/cmTC_3754b.dir/build.make CMakeFiles/cmTC_3754b.dir/build
+make[1]: Entering directory '/home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3754b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_3754b.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3754b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3754b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_    -rdynamic CMakeFiles/cmTC_3754b.dir/CheckFunctionExists.c.o  -o cmTC_3754b  /usr/lib/x86_64-linux-gnu/libblas.so /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so -lpthread -lm -ldl 
+CMakeFiles/cmTC_3754b.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3754b.dir/build.make:109: recipe for target 'cmTC_3754b' failed
+make[1]: *** [cmTC_3754b] Error 1
+make[1]: Leaving directory '/home/yxh/Documents/mars/build/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_3754b/fast' failed
+make: *** [cmTC_3754b/fast] Error 2
+
+
+

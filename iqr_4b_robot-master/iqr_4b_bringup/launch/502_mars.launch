@@ -37,12 +37,15 @@
      <arg name="port" value="5901"/>
 	<arg name="address" value="127.0.0.1"/>
   </include>
-  <node name="joy_to_twist" pkg="gazebo_simulation_scene" type="joy_to_twist.py" output="screen"/>
+  <node name="joy_to_twist" pkg="a502_teleop" type="joy_to_twist.py" output="screen"/>
   <!--node pkg="rosbag" type="record" name="bag_record" args="/stereocamera/left/image_raw /stereocamera/right/camera_info /stereocamera/right/image_raw /camera/depth/camera_info /tf"/>
  <node pkg="rosbag" type="record" name="bag_record" args=" /gazebo/model_states  /stereocamera/left/image_raw/compressed /stereocamera/right/camera_info /stereocamera/right/image_raw/compressed /imu/data"/-->
 <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
 	respawn="false" output="screen">
     <remap from="/joint_states" to="/joint_states" />
+  </node>
+<node name="pub_camera_state" pkg="a502_teleop" type="getModel.py"
+	respawn="false" output="screen">
   </node>
   <!-- Spawn Jackal -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"

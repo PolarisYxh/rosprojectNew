@@ -1,0 +1,8 @@
+prefix=/home/yxh/Documents/mars/install
+
+Name: color_depth_msg
+Description: Description of color_depth_msg
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

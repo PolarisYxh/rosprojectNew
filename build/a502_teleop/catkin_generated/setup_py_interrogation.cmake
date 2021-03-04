@@ -1,0 +1,7 @@
+set(a502_teleop_SETUP_PY_SETUP_MODULE "distutils.core")
+set(a502_teleop_SETUP_PY_VERSION "1.2.1")
+set(a502_teleop_SETUP_PY_SCRIPTS "")
+set(a502_teleop_SETUP_PY_PACKAGES "502_teleop")
+set(a502_teleop_SETUP_PY_PACKAGE_DIRS "src/502_teleop")
+set(a502_teleop_SETUP_PY_MODULES "")
+set(a502_teleop_SETUP_PY_MODULE_DIRS "")
